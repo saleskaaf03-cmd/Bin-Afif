@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخطة التسويقية والاستراتيجية التنافسية | بن عفيف × KAAF GROUP</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Cairo & IBM Plex Sans Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kaaf: {
+                            blue: '#0A4C86',
+                            blueLight: '#1C75C8',
+                            blueDeep: '#05233E',
+                            blueDarkest: '#031424',
+                            green: '#00875A',
+                            greenLight: '#00B377',
+                            greenDeep: '#023824',
+                            gold: '#D4AF37',
+                            goldLight: '#F5DE88',
+                            purple: '#7C3AED',
+                            purpleLight: '#A78BFA',
+                            rose: '#E11D48',
+                            roseLight: '#FB7185',
+                            cyan: '#06B6D4',
+                            cyanLight: '#67E8F9',
+                            amber: '#F59E0B',
+                            dark: '#030812',
+                            darkSlate: '#081220',
+                            cardBg: '#0B1A2E',
+                            border: '#1B314B'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        ibm: ['IBM Plex Sans Arabic', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'glow-blue': '0 0 40px -10px rgba(10, 76, 134, 0.7)',
+                        'glow-green': '0 0 40px -10px rgba(0, 135, 90, 0.7)',
+                        'glow-purple': '0 0 40px -10px rgba(124, 58, 237, 0.7)',
+                        'glow-gold': '0 0 40px -10px rgba(212, 175, 55, 0.6)',
+                        'web-card': '0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+            background-color: #030812;
+            color: #E2E8F0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030812;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1B314B;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00B377;
+        }
+
+        /* Fullscreen Interactive Canvas */
+        #interactive-bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.85;
+        }
+
+        /* Top Accent Ribbon */
+        .kaaf-colorful-ribbon {
+            background: linear-gradient(90deg, 
+                #0A4C86 0%, 
+                #06B6D4 20%, 
+                #00875A 40%, 
+                #D4AF37 60%, 
+                #7C3AED 80%, 
+                #E11D48 100%
+            );
+            height: 4px;
+        }
+
+        /* Subtle Text Drop Shadow for Readability */
+        h1, h2, h3, h4 {
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+        }
+
+        /* Web Glassmorphic Card Styles */
+        .web-card-blue {
+            background: linear-gradient(135deg, rgba(10, 30, 56, 0.82) 0%, rgba(5, 16, 32, 0.94) 100%);
+            border: 1px solid rgba(28, 117, 200, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-blue:hover {
+            border-color: rgba(28, 117, 200, 0.85);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(10, 76, 134, 0.5);
+        }
+
+        .web-card-green {
+            background: linear-gradient(135deg, rgba(8, 38, 28, 0.82) 0%, rgba(4, 20, 15, 0.94) 100%);
+            border: 1px solid rgba(0, 179, 119, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-green:hover {
+            border-color: rgba(0, 179, 119, 0.85);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(0, 135, 90, 0.5);
+        }
+
+        .web-card-purple {
+            background: linear-gradient(135deg, rgba(30, 18, 54, 0.82) 0%, rgba(14, 8, 28, 0.94) 100%);
+            border: 1px solid rgba(167, 139, 250, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-purple:hover {
+            border-color: rgba(167, 139, 250, 0.85);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(124, 58, 237, 0.5);
+        }
+
+        .web-card-cyan {
+            background: linear-gradient(135deg, rgba(8, 36, 48, 0.82) 0%, rgba(4, 18, 26, 0.94) 100%);
+            border: 1px solid rgba(6, 182, 212, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-cyan:hover {
+            border-color: rgba(6, 182, 212, 0.85);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(6, 182, 212, 0.5);
+        }
+
+        .web-card-amber {
+            background: linear-gradient(135deg, rgba(38, 28, 12, 0.82) 0%, rgba(20, 14, 6, 0.94) 100%);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-amber:hover {
+            border-color: rgba(245, 158, 11, 0.85);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(245, 158, 11, 0.5);
+        }
+
+        .web-card-rose {
+            background: linear-gradient(135deg, rgba(40, 14, 28, 0.82) 0%, rgba(20, 6, 14, 0.94) 100%);
+            border: 1px solid rgba(251, 113, 133, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-rose:hover {
+            border-color: rgba(251, 113, 133, 0.85);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(225, 29, 72, 0.5);
+        }
+
+        .web-card-gold {
+            background: linear-gradient(135deg, rgba(35, 26, 8, 0.88) 0%, rgba(16, 12, 4, 0.96) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            backdrop-filter: blur(16px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-gold:hover {
+            border-color: rgba(212, 175, 55, 0.9);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Floating Icon Animations */
+        @keyframes float-alive-left {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+                box-shadow: 0 10px 25px -5px rgba(10, 76, 134, 0.6), 0 0 20px rgba(30, 117, 198, 0.4);
+            }
+            50% {
+                transform: translateY(-9px) rotate(1deg);
+                box-shadow: 0 20px 35px -5px rgba(10, 76, 134, 0.8), 0 0 32px rgba(30, 117, 198, 0.65);
+            }
+        }
+
+        @keyframes float-alive-right {
+            0%, 100% {
+                transform: translateY(0px) scale(1);
+                box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5), 0 0 20px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                transform: translateY(-9px) scale(1.04);
+                box-shadow: 0 20px 35px -5px rgba(37, 211, 102, 0.8), 0 0 32px rgba(37, 211, 102, 0.65);
+            }
+        }
+
+        .animate-floating-kaaf {
+            animation: float-alive-left 4s ease-in-out infinite;
+        }
+
+        .animate-floating-whatsapp {
+            animation: float-alive-right 4s ease-in-out infinite 0.7s;
+        }
+
+        /* Nav link marker */
+        .nav-link {
+            position: relative;
+            transition: color 0.2s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: #00B377;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Print Styles */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 1.5cm;
+            }
+            body {
+                background-color: #FFFFFF !important;
+                color: #0F172A !important;
+            }
+            #interactive-bg-canvas, #floating-kaaf-btn, #floating-wa-btn, .no-print, header {
+                display: none !important;
+            }
+            .web-card-blue, .web-card-green, .web-card-purple, .web-card-cyan, .web-card-amber, .web-card-rose, .web-card-gold {
+                background: #FFFFFF !important;
+                color: #0F172A !important;
+                border: 1px solid #CBD5E1 !important;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+            }
+            h1, h2, h3, h4 {
+                color: #05233E !important;
+                text-shadow: none !important;
+                page-break-after: avoid;
+            }
+            .text-white, .text-gray-200, .text-gray-300, .text-gray-400 {
+                color: #1E293B !important;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-kaaf-green selection:text-white">
+
+    <!-- INTERACTIVE HTML5 CANVAS BACKGROUND -->
+    <canvas id="interactive-bg-canvas"></canvas>
+
+    <!-- Top Accent Ribbon -->
+    <div class="kaaf-colorful-ribbon fixed top-0 left-0 right-0 z-50"></div>
+
+    <!-- TOP WEBSITE NAVIGATION BAR -->
+    <header id="top-nav" class="sticky top-1 z-50 bg-kaaf-dark/85 backdrop-blur-xl border-b border-kaaf-border/70 px-4 lg:px-10 py-3.5 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Brand Logo & Identity -->
+            <a href="#cover" class="flex items-center gap-3.5 group">
+                <div class="w-11 h-11 rounded-2xl overflow-hidden border border-kaaf-greenLight/50 p-0.5 bg-black shrink-0 shadow-glow-green transition-transform group-hover:scale-105">
+                    <img src="https://i.ibb.co/qKTyhpv/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF GROUP Logo" class="w-full h-full object-cover rounded-xl">
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-base font-black text-white tracking-wide font-ibm">KAAF <span class="text-kaaf-greenLight">GROUP</span></span>
+                        <span class="px-2 py-0.5 rounded-full bg-kaaf-green/30 text-kaaf-greenLight text-[10px] font-extrabold border border-kaaf-green/50">خطة نمو شهرين</span>
+                    </div>
+                    <p class="text-[11px] text-gray-400 font-medium">Retail Strategy • Omnichannel Growth • Eastern Province</p>
+                </div>
+            </a>
+
+            <!-- Desktop Website Navigation Links -->
+            <nav class="hidden xl:flex items-center gap-3.5 text-xs font-bold text-gray-300">
+                <a href="#exec-summary" class="nav-link hover:text-white">الملخص</a>
+                <a href="#audit" class="nav-link hover:text-white">التدقيق الرقمي</a>
+                <a href="#audience" class="nav-link hover:text-white">الجمهور (5)</a>
+                <a href="#competition" class="nav-link hover:text-white">المنافسة وسيناريو كيو</a>
+                <a href="#offers" class="nav-link hover:text-white">نظام العروض (7)</a>
+                <a href="#content" class="nav-link hover:text-white">المحتوى والإعلانات</a>
+                <a href="#seasonal" class="nav-link hover:text-white">الخطة الموسمية</a>
+                <a href="#roadmap" class="nav-link hover:text-white">الجدول ومؤشرات KPI</a>
+                <a href="#next-steps" class="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-kaaf-green to-kaaf-greenLight text-white font-black hover:brightness-110 shadow-sm transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-rocket text-xs"></i>
+                    <span>الخطوات القادمة</span>
+                </a>
+            </nav>
+
+            <!-- Actions Header Info -->
+            <div class="flex items-center gap-3">
+                <div class="hidden sm:flex flex-col text-left font-ibm border-l border-kaaf-border/80 pl-3">
+                    <span class="text-[10px] text-kaaf-gold font-bold uppercase">EASTERN PROVINCE • KSA</span>
+                    <span class="text-xs font-black text-white">علامة بن عفيف | Bin Afif</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FLOATING KAAF LOGO BUTTON (BOTTOM LEFT) -->
+    <aside id="floating-kaaf-btn" class="fixed bottom-6 left-6 z-50">
+        <a href="https://kaafmarketing.sa/" target="_blank" rel="noopener" title="KAAF GROUP | الموقع الرسمي" class="block w-14 h-14 rounded-full overflow-hidden border-2 border-kaaf-greenLight/90 p-0.5 bg-black/90 animate-floating-kaaf transition-transform hover:scale-115 active:scale-95 group backdrop-blur-md">
+            <img src="https://i.ibb.co/qKTyhpv/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF GROUP Logo" class="w-full h-full object-cover rounded-full">
+        </a>
+    </aside>
+
+    <!-- FLOATING WHATSAPP BUTTON (BOTTOM RIGHT) -->
+    <aside id="floating-wa-btn" class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/966579534107?text=السلام%20عليكم،%20نرغب%20في%20مناقشة%20واعتماد%20الخطة%20التسويقية%20والاستراتيجية%20التنافسية%20لعلامة%20بن%20عفيف" target="_blank" rel="noopener" title="تواصل مباشر عبر واتساب (+966 57 953 4107)" class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center border-2 border-emerald-200/80 animate-floating-whatsapp transition-transform hover:scale-115 active:scale-95 group shadow-lg">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+        </a>
+    </aside>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-20">
+
+        <!-- ========================================================================= -->
+        <!-- COVER SECTION                                                             -->
+        <!-- ========================================================================= -->
+        <section id="cover" class="relative rounded-[32px] overflow-hidden p-8 sm:p-14 lg:p-16 web-card-green text-white backdrop-blur-lg">
+            <div class="kaaf-colorful-ribbon absolute top-0 left-0 right-0"></div>
+
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <!-- Left Hero Details -->
+                <div class="lg:col-span-8 space-y-6">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-kaaf-green/30 border border-kaaf-greenLight/40 text-kaaf-greenLight text-xs font-bold font-ibm tracking-wide">
+                        <i class="fa-solid fa-cart-shopping text-kaaf-greenLight"></i>
+                        <span>خطة نمو واستراتيجية تنافسية لمدة شهرين • ابتداءً من 24 نوفمبر 2026</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+                            بن عفيف <span class="text-kaaf-gold font-ibm text-2xl sm:text-4xl">× KAAF GROUP</span>
+                            <span class="block text-xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-l from-kaaf-greenLight via-emerald-200 to-kaaf-cyanLight font-cairo mt-2">
+                                الخطة التسويقية والاستراتيجية التنافسية في قطاع التجزئة الغذائية
+                            </span>
+                        </h1>
+                        <p class="text-base sm:text-xl font-bold text-emerald-100/90 font-cairo">
+                            المنطقة الشرقية – المملكة العربية السعودية | إعداد: إدارة الاستراتيجية والنمو في KAAF GROUP
+                        </p>
+                    </div>
+
+                    <p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-2xl font-normal">
+                        نحن لا نريد أن ينافس <strong class="text-white">بن عفيف</strong> على السعر فقط؛ بل نبني منظومة نمو مترابطة تجعله <strong class="text-kaaf-greenLight">الخيار الأول والمفضل للمتسوق في المنطقة الشرقية</strong> عبر عروض ذكية، وتجربة تسوق مميزة، ومحتوى قريب من الأسرة السعودية، وحضور رقمي يحمي مكانته ويوسع حصته السوقية.
+                    </p>
+
+                    <!-- Trust Metrics Bar -->
+                    <div class="pt-2 grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        <div class="p-3.5 rounded-2xl bg-black/50 border border-white/10 text-center">
+                            <i class="fa-solid fa-shield-halved text-kaaf-gold mb-1 block text-lg"></i>
+                            <span class="text-xs text-gray-300 font-bold block">جاهزية تنافسية بالدمام</span>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-black/50 border border-white/10 text-center">
+                            <i class="fa-solid fa-tags text-kaaf-greenLight mb-1 block text-lg"></i>
+                            <span class="text-xs text-gray-300 font-bold block">7 أنظمة عروض مدروسة</span>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-black/50 border border-white/10 text-center">
+                            <i class="fa-solid fa-snowflake text-kaaf-cyanLight mb-1 block text-lg"></i>
+                            <span class="text-xs text-gray-300 font-bold block">مواسم الشتاء ورمضان 1448</span>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-black/50 border border-white/10 text-center">
+                            <i class="fa-solid fa-store text-kaaf-purpleLight mb-1 block text-lg"></i>
+                            <span class="text-xs text-gray-300 font-bold block">ربط الإعلان بزيارات الفروع</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Card -->
+                <div class="lg:col-span-4 flex justify-center">
+                    <div class="w-full max-w-sm space-y-4 p-6 rounded-3xl bg-kaaf-cardBg/90 border border-kaaf-green/50 shadow-2xl backdrop-blur-md">
+                        <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                            <span class="text-xs font-black text-white flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                بطاقة الوثيقة الاستراتيجية
+                            </span>
+                            <span class="text-[10px] text-kaaf-greenLight font-mono font-bold">RETAIL &amp; FMCG</span>
+                        </div>
+
+                        <div class="space-y-2.5 text-xs">
+                            <div class="p-3 rounded-xl bg-kaaf-darkSlate/90 border border-white/10 flex justify-between items-center">
+                                <span class="text-gray-400">العلامة التجارية:</span>
+                                <span class="font-bold text-kaaf-greenLight">بن عفيف (Bin Afif)</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-kaaf-darkSlate/90 border border-white/10 flex justify-between items-center">
+                                <span class="text-gray-400">النطاق الجغرافي:</span>
+                                <span class="font-bold text-white">المنطقة الشرقية – السعودية</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-kaaf-darkSlate/90 border border-white/10 flex justify-between items-center">
+                                <span class="text-gray-400">المدة الزمنية:</span>
+                                <span class="font-bold text-white">شهرين (24 نوفمبر 2026)</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-kaaf-darkSlate/90 border border-white/10 flex justify-between items-center">
+                                <span class="text-gray-400">الشريك الاستشاري:</span>
+                                <span class="font-bold text-kaaf-gold">KAAF GROUP</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-1">
+                            <a href="#roadmap" class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-kaaf-green via-kaaf-greenLight to-kaaf-cyan text-white font-black text-xs hover:brightness-110 shadow-md transition">
+                                <span>استعراض الجدول التنفيذي (8 أسابيع)</span>
+                                <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 01 — EXECUTIVE SUMMARY                                            -->
+        <!-- ========================================================================= -->
+        <section id="exec-summary" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-kaaf-border/60 pb-3">
+                <div class="flex items-center gap-3">
+                    <span class="px-3 py-1 rounded-full bg-kaaf-green/30 text-kaaf-greenLight font-black text-xs border border-kaaf-green/50">01</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">الملخص التنفيذي (Executive Summary)</h2>
+                </div>
+                <span class="text-xs text-kaaf-greenLight font-bold hidden sm:inline">رؤية KAAF GROUP</span>
+            </div>
+
+            <div class="web-card-green rounded-3xl p-8 sm:p-10 shadow-web-card space-y-6">
+                <p class="text-base sm:text-lg text-gray-200 leading-relaxed font-medium">
+                    تقدم <strong class="text-white">KAAF GROUP</strong> هذه الخطة التسويقية والاستراتيجية التنافسية المتكاملة لمدة شهرين لعلامة <strong class="text-kaaf-greenLight">بن عفيف</strong> في المنطقة الشرقية بالمملكة العربية السعودية. تنطلق رؤيتنا من حقيقة جوهرية في قطاع التجزئة الغذائية والهايبر ماركت (<span class="font-ibm text-xs text-kaaf-cyanLight">Grocery Retail &amp; Hypermarket</span>): النجاح المستدام لا يتحقق عبر تخفيضات عشوائية تستنزف هوامش الربح، بل ببناء <strong class="text-white">منظومة تجارية مترابطة</strong> تربط بين فهم السوق، وتصميم العروض الذكية، وصناعة المحتوى القريب من الأسرة، والحملات الإعلانية الموجهة جغرافياً، وتجربة التسوق داخل الفرع، وقياس المبيعات الفعلية.
+                </p>
+
+                <!-- 8-Node Connected Ecosystem Diagram -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5 pt-2 text-center text-xs">
+                    <div class="p-3 rounded-2xl bg-black/55 border border-kaaf-cyan/40">
+                        <i class="fa-solid fa-compass text-kaaf-cyanLight text-base mb-1 block"></i>
+                        <strong class="text-white block">1. فهم السوق</strong>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-black/55 border border-kaaf-green/40">
+                        <i class="fa-solid fa-tags text-kaaf-greenLight text-base mb-1 block"></i>
+                        <strong class="text-white block">2. العروض الذكية</strong>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-black/55 border border-kaaf-purple/40">
+                        <i class="fa-solid fa-film text-kaaf-purpleLight text-base mb-1 block"></i>
+                        <strong class="text-white block">3. المحتوى المحلي</strong>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-black/55 border border-kaaf-blue/40">
+                        <i class="fa-solid fa-bullseye text-kaaf-cyanLight text-base mb-1 block"></i>
+                        <strong class="text-white block">4. الإعلانات</strong>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-black/55 border border-kaaf-amber/40">
+                        <i class="fa-solid fa-face-smile text-kaaf-gold text-base mb-1 block"></i>
+                        <strong class="text-white block">5. تجربة العميل</strong>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-black/55 border border-kaaf-rose/40">
+                        <i class="fa-solid fa-location-dot text-kaaf-roseLight text-base mb-1 block"></i>
+                        <strong class="text-white block">6. زيارات الفروع</strong>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-black/55 border border-kaaf-green/40">
+                        <i class="fa-solid fa-cash-register text-kaaf-greenLight text-base mb-1 block"></i>
+                        <strong class="text-white block">7. المبيعات</strong>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-black/55 border border-kaaf-gold/40">
+                        <i class="fa-solid fa-chart-line text-kaaf-gold text-base mb-1 block"></i>
+                        <strong class="text-white block">8. القياس والتحسين</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 02 — BUSINESS OVERVIEW & DATA VERIFICATION TRANSPARENCY           -->
+        <!-- ========================================================================= -->
+        <section id="business-overview" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-kaaf-border/60 pb-3">
+                <div class="flex items-center gap-3">
+                    <span class="px-3 py-1 rounded-full bg-kaaf-blue/30 text-kaaf-cyanLight font-black text-xs border border-kaaf-blue/50">02</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">نبذة عن النشاط والفرصة التسويقية (ومنهجية التحقق من البيانات)</h2>
+                </div>
+                <span class="text-xs text-kaaf-cyanLight font-bold hidden sm:inline">Business &amp; Data Governance</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <div class="lg:col-span-7 web-card-blue p-6 sm:p-8 rounded-3xl space-y-4">
+                    <h3 class="text-xl font-black text-white">طبيعة النشاط والفرصة المتاحة في المنطقة الشرقية</h3>
+                    <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                        تعمل علامة <strong class="text-white">بن عفيف</strong> في قطاع التجزئة الغذائية والاحتياجات اليومية بالمنطقة الشرقية، وهو قطاع يتميز بارتفاع وتيرة الشراء المتكرر وحساسية القرار الشرائي لعوامل القرب، وجودة الطازج، وتوفر الأساسيات، ووضوح العروض. الفرصة التسويقية الكبرى تكمن في تحويل القرب الجغرافي والثقة المحلية إلى <strong class="text-kaaf-cyanLight">ارتباط رقمي يومي</strong> يجعل المتسوق يراجع عروض بن عفيف قبل التوجه للتسوق الأسبوعي أو اليومي.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs pt-2">
+                        <div class="p-3.5 rounded-2xl bg-black/50 border border-kaaf-cyan/30">
+                            <strong class="text-kaaf-cyanLight block mb-1">الفرصة الرقمية الفورية</strong>
+                            إعادة ضبط الهوية البصرية على Instagram وTikTok وتحويلها إلى قناة استقطاب يومية للزيارات.
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-black/50 border border-kaaf-green/30">
+                            <strong class="text-kaaf-greenLight block mb-1">الفرصة التنافسية</strong>
+                            الاستعداد الاستباقي لأي توسع منافس في الدمام والشرقية عبر ترسيخ الولاء وتجربة التسوق.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transparency Table: Confirmed vs Preliminary vs Needs Verification -->
+                <div class="lg:col-span-5 web-card-amber p-6 sm:p-8 rounded-3xl space-y-4">
+                    <h3 class="text-lg font-black text-kaaf-gold flex items-center gap-2">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                        مصفوفة موثوقية البيانات (قبل التنفيذ)
+                    </h3>
+                    <div class="space-y-3 text-xs">
+                        <div class="p-3 rounded-xl bg-black/60 border border-emerald-500/40">
+                            <span class="px-2 py-0.5 rounded bg-emerald-950 text-kaaf-greenLight font-bold text-[10px]">بيانات مؤكدة</span>
+                            <p class="text-gray-300 mt-1">نشاط بن عفيف في قطاع التجزئة الغذائية بالمنطقة الشرقية، وتاريخ انطلاق الخطة في 24 نوفمبر 2026 لمدة شهرين.</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-black/60 border border-amber-500/40">
+                            <span class="px-2 py-0.5 rounded bg-amber-950 text-kaaf-gold font-bold text-[10px]">ملاحظات أولية (تُستكمل بالتدقيق)</span>
+                            <p class="text-gray-300 mt-1">ملاحظات فريق العمل الأولية على حسابات Instagram وTikTok، وتوفر ملفات Google Sheets وGoogle Drive للفحص التشغيلي عند منح الصلاحيات.</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-black/60 border border-rose-500/40">
+                            <span class="px-2 py-0.5 rounded bg-rose-950 text-kaaf-roseLight font-bold text-[10px]">افتراضات تحتاج إلى تحقق</span>
+                            <p class="text-gray-300 mt-1">احتمال دخول علامة «كيو» إلى الدمام (سيناريو غير مؤكد)، هوامش الربح والمخزون لكل صنف، ومساحات الفروع وتفاصيل نقاط البيع (POS).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 03 — CURRENT ACCOUNTS & CONTENT AUDIT                             -->
+        <!-- ========================================================================= -->
+        <section id="audit" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-kaaf-border/60 pb-3">
+                <div class="flex items-center gap-3">
+                    <span class="px-3 py-1 rounded-full bg-kaaf-rose/30 text-kaaf-roseLight font-black text-xs border border-kaaf-rose/50">03</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">تحليل الوضع الحالي للحسابات والمحتوى والمواد المتاحة</h2>
+                </div>
+                <span class="text-xs text-kaaf-roseLight font-bold hidden sm:inline">Digital &amp; Asset Audit</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Instagram Audit -->
+                <div class="web-card-rose p-6 sm:p-8 rounded-3xl space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 rounded-full bg-kaaf-rose/40 text-kaaf-roseLight font-mono font-bold text-xs">INSTAGRAM</span>
+                        <i class="fa-brands fa-instagram text-kaaf-roseLight text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-white">تشخيص حساب Instagram (ملاحظات أولية)</h3>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-triangle-exclamation text-kaaf-roseLight mt-0.5"></i><span>غياب صورة بروفايل احترافية تعكس العلامة التجارية بوضوح.</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-triangle-exclamation text-kaaf-roseLight mt-0.5"></i><span>عدم وجود Bio تعريفي واضح أو روابط تواصل ومواقع الفروع.</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-triangle-exclamation text-kaaf-roseLight mt-0.5"></i><span>الـ Highlights عبارة عن أيقونات فارغة دون محتوى فعلي يفيد المتسوق.</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-triangle-exclamation text-kaaf-roseLight mt-0.5"></i><span>عدم اتساق الـ Grid والهوية البصرية وغياب Thumbnails موحدة للريلز.</span></li>
+                    </ul>
+                </div>
+
+                <!-- TikTok Audit -->
+                <div class="web-card-purple p-6 sm:p-8 rounded-3xl space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 rounded-full bg-kaaf-purple/40 text-kaaf-purpleLight font-mono font-bold text-xs">TIKTOK</span>
+                        <i class="fa-brands fa-tiktok text-kaaf-purpleLight text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-white">تشخيص حساب TikTok (ملاحظات أولية)</h3>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-triangle-exclamation text-kaaf-purpleLight mt-0.5"></i><span>الحساب مضبوط كحساب شخصي (Personal) وليس Business Account.</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-triangle-exclamation text-kaaf-purpleLight mt-0.5"></i><span>عدم توحيد اسم المستخدم (Username) مع حساب Instagram.</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-triangle-exclamation text-kaaf-purpleLight mt-0.5"></i><span>غياب Bio احترافي ورابط تواصل مباشر للمتسوقين.</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-triangle-exclamation text-kaaf-purpleLight mt-0.5"></i><span>الحاجة إلى سلاسل فيديو قصيرة مخصصة لطبيعة TikTok بدلاً من النسخ المباشر.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Drive, Sheets & Branch Assets Protocol -->
+                <div class="web-card-cyan p-6 sm:p-8 rounded-3xl space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 rounded-full bg-kaaf-cyan/40 text-kaaf-cyanLight font-mono font-bold text-xs">ASSETS &amp; DATA</span>
+                        <i class="fa-solid fa-folder-open text-kaaf-cyanLight text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-white">بروتوكول فحص Google Sheets و Drive والفروع</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        تتضمن منهجية <strong class="text-white">KAAF GROUP</strong> في الأيام الثلاثة الأولى فحصاً تفصيلياً لجميع الملفات الفعلية فور استلام صلاحيات الوصول:
+                    </p>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i><span>تدقيق ملف Google Sheets للمحتوى المجدول والعروض السابقة.</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i><span>فرز تصاميم Google Drive وتقييم جودتها وملاءمتها لجمهور الشرقية.</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i><span>تأكيد روابط Google Maps وأرقام الواتساب وقائمة الفئات المتوفرة فعلياً.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 04 — TARGET AUDIENCE SEGMENTATION (5 SEGMENTS)                    -->
+        <!-- ========================================================================= -->
+        <section id="audience" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-kaaf-border/60 pb-3">
+                <div class="flex items-center gap-3">
+                    <span class="px-3 py-1 rounded-full bg-kaaf-green/30 text-kaaf-greenLight font-black text-xs border border-kaaf-green/50">04</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">تحليل الجمهور المستهدف في المنطقة الشرقية (5 شرائح رئيسية)</h2>
+                </div>
+                <span class="text-xs text-kaaf-greenLight font-bold hidden sm:inline">Shopper Personas</span>
+            </div>
+
+            <div class="web-card-green rounded-3xl p-6 sm:p-8 shadow-web-card space-y-6">
+                <p class="text-xs sm:text-sm text-gray-200 leading-relaxed">
+                    قرار الشراء في قطاع التجزئة الغذائية لا يرتبط بالخصم وحده؛ بل يتوزع بين <strong class="text-white">القيمة مقابل المال، الطزاجة، توفر الأصناف، وسهولة الوصول للفرع</strong>. فيما يلي التحليل الكامل لشرائح متسوقي بن عفيف الخمس:
+                </p>
+
+                <div class="overflow-x-auto rounded-2xl border border-white/10">
+                    <table class="w-full text-right text-xs">
+                        <thead class="bg-black/70 text-gray-200 font-black border-b border-white/10">
+                            <tr>
+                                <th class="p-3.5 min-w-[140px]">الشريحة</th>
+                                <th class="p-3.5 min-w-[170px]">الاحتياجات ودوافع الشراء</th>
+                                <th class="p-3.5 min-w-[160px]">العوائق التي تمنع الشراء</th>
+                                <th class="p-3.5 min-w-[190px]">الرسالة التسويقية المناسبة</th>
+                                <th class="p-3.5 min-w-[150px]">نوع العروض الجاذبة</th>
+                                <th class="p-3.5 min-w-[130px]">قنوات الوصول</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/10 text-gray-300">
+                            <tr class="hover:bg-white/5 transition">
+                                <td class="p-3.5 font-black text-kaaf-greenLight">1. العائلات والأسر</td>
+                                <td class="p-3.5">شراء مقاضي البيت الأسبوعية والشهرية؛ توفير الميزانية، تنوع الأصناف، وجودة المنتجات الغذائية.</td>
+                                <td class="p-3.5">نقص بعض الأصناف الأساسية فيضطر العميل لزيارة متجر آخر، أو عدم وضوح مجلة العروض.</td>
+                                <td class="p-3.5 text-white">«كل مقاضي بيتك تحت سقف واحد.. جودة تضمنها وسعر يريح ميزانية أسرتك».</td>
+                                <td class="p-3.5">عروض السلة المتكاملة، عروض نهاية الأسبوع، وعروض الفئات الأساسية.</td>
+                                <td class="p-3.5">Instagram، Snapchat، WhatsApp، وGoogle Maps.</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition">
+                                <td class="p-3.5 font-black text-kaaf-gold">2. الباحثون عن العروض والتوفير</td>
+                                <td class="p-3.5">مقارنة الأسعار بين المتاجر واقتناص أفضل قيمة مقابل المال وخصومات الكميات.</td>
+                                <td class="p-3.5">الشك في حقيقة الخصم أو نفاد الكميات المعروضة فور وصول العميل للفرع.</td>
+                                <td class="p-3.5 text-white">«عروض حقيقية على الأصناف اللي تحتاجها فعلاً.. وفر صح مع بن عفيف».</td>
+                                <td class="p-3.5">عروض المنتجات الأساسية (Traffic Drivers) وعروض الكميات (1+1 / عبوات التوفير).</td>
+                                <td class="p-3.5">TikTok، Snapchat Ads، مجموعات WhatsApp، وإعلانات العروض.</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition">
+                                <td class="p-3.5 font-black text-kaaf-cyanLight">3. المتسوقون اليوميون</td>
+                                <td class="p-3.5">شراء الخبز، الألبان، المشروبات، والاحتياجات السريعة؛ سهولة الوصول وسرعة المحاسبة.</td>
+                                <td class="p-3.5">الازدحام، صعوبة إيجاد موقف، أو عدم وضوح موقع الفرع وأوقات العمل.</td>
+                                <td class="p-3.5 text-white">«قريب منك وجاهز لاحتياجك اليومي.. تسوّق سريع وطازج كل يوم».</td>
+                                <td class="p-3.5">عروض المخبوزات والألبان اليومية وعروض الوجبات السريعة والمشروبات.</td>
+                                <td class="p-3.5">Google Maps، Local Ads بالنطاق الجغرافي الضيق، وInstagram Stories.</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition">
+                                <td class="p-3.5 font-black text-kaaf-purpleLight">4. المهتمون بالجودة والمنتجات المميزة</td>
+                                <td class="p-3.5">جودة المكونات، الطزاجة، النظافة، التنظيم داخل المتجر، وتوفر خيارات مختارة ومستوردة.</td>
+                                <td class="p-3.5">انطباع أن المتجر يركز على السعر الرخيص فقط على حساب الجودة والترتيب.</td>
+                                <td class="p-3.5 text-white">«نختار لك الأجود بعناية.. تجربة تسوق راقية تليق بذوقك».</td>
+                                <td class="p-3.5">إطلاق المنتجات الجديدة، عروض التذوق والتجربة، وباقات الضيافة المختارة.</td>
+                                <td class="p-3.5">Instagram Reels، TikTok، وصناع المحتوى المتخصصين في الطبخ واللايف ستايل.</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition">
+                                <td class="p-3.5 font-black text-kaaf-roseLight">5. أصحاب المشتريات الكبيرة والمناسبات</td>
+                                <td class="p-3.5">تجهيز الولائم، الكشتات الشتوية، والتجمعات العائلية بكميات كبيرة وتغليف مناسب.</td>
+                                <td class="p-3.5">عدم توفر كميات كافية بالرفوف أو غياب عروض مخصصة للكميات الكبيرة والكراتين.</td>
+                                <td class="p-3.5 text-white">«تجهيز مناسباتكم وجمعاتكم الشتوية علينا.. وفرة كميات وأسعار تنافسية».</td>
+                                <td class="p-3.5">عروض الكميات والكراتين، باقات الشتاء والبر، وعروض المواسم (رمضان والعيد).</td>
+                                <td class="p-3.5">Google Search، WhatsApp المباشر، وإعلانات المواسم على Meta وSnapchat.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 05 & 06 — MARKET, COMPETITION & POTENTIAL "Q" ENTRY SCENARIO      -->
+        <!-- ========================================================================= -->
+        <section id="competition" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-kaaf-border/60 pb-3">
+                <div class="flex items-center gap-3">
+                    <span class="px-3 py-1 rounded-full bg-kaaf-amber/30 text-kaaf-gold font-black text-xs border border-kaaf-amber/50">05 &amp; 06</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">تحليل السوق والمنافسين والسيناريو التنافسي لدخول «كيو» المحتمل</h2>
+                </div>
+                <span class="text-xs text-kaaf-gold font-bold hidden sm:inline">Competitive Intelligence</span>
+            </div>
+
+            <!-- Competitors Matrix -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="web-card-blue p-6 rounded-3xl space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="px-3 py-1 rounded-full bg-kaaf-blue/40 text-kaaf-cyanLight font-bold text-xs">Lulu Hypermarket</span>
+                        <i class="fa-solid fa-building text-kaaf-cyanLight"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-white">نموذج لولو هايبر ماركت</h3>
+                    <ul class="space-y-1.5 text-xs text-gray-300">
+                        <li>• <strong>نقاط القوة:</strong> تنوع هائل، أقسام طازج ومخبوزات قوية، ومهرجانات تسوق موسمية ضخمة.</li>
+                        <li>• <strong>أسلوب التواصل:</strong> كتالوجات رقمية مكثفة وتغطيات مؤثرين عند افتتاح الفروع والعروض الكبرى.</li>
+                        <li>• <strong>فجوة غير مستغلة:</strong> ضخامة المساحة قد تُشعر المتسوق اليومي بطول الرحلة مقارنة بمتجر حيّ قريب وسريع.</li>
+                    </ul>
+                </div>
+
+                <div class="web-card-green p-6 rounded-3xl space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="px-3 py-1 rounded-full bg-kaaf-green/40 text-kaaf-greenLight font-bold text-xs">Panda Retail</span>
+                        <i class="fa-solid fa-store text-kaaf-greenLight"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-white">نموذج أسواق بنده</h3>
+                    <ul class="space-y-1.5 text-xs text-gray-300">
+                        <li>• <strong>نقاط القوة:</strong> انتشار واسع في الأحياء، برامج ولاء رقمية، وعروض أسبوعية ثابتة.</li>
+                        <li>• <strong>أسلوب التواصل:</strong> رسائل موحدة على مستوى المملكة وقوالب عروض تقليدية.</li>
+                        <li>• <strong>فجوة غير مستغلة:</strong> المحتوى المركزي يفتقر أحياناً للروح المحلية الخاصة بأحياء المنطقة الشرقية وتفاصيلها.</li>
+                    </ul>
+                </div>
+
+                <div class="web-card-amber p-6 rounded-3xl space-y-3 border border-kaaf-gold/50">
+                    <div class="flex justify-between items-center">
+                        <span class="px-3 py-1 rounded-full bg-kaaf-amber/40 text-kaaf-gold font-bold text-xs">سيناريو احترازي • «كيو»</span>
+                        <i class="fa-solid fa-shield-virus text-kaaf-gold"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-white">احتمال دخول علامة «كيو» إلى الدمام</h3>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        <strong>تعامل استراتيجي (خبر غير مؤكد):</strong> نتعامل مع احتمال دخول «كيو» إلى الدمام كسيناريو استباقي؛ فالعلامات الجديدة تعتمد عادةً على عروض افتتاحية صاخبة وحضور بصري عصري لجذب الفضول.
+                    </p>
+                    <p class="text-xs text-kaaf-goldLight font-bold">
+                        الحل: تحصين قاعدة عملاء بن عفيف بالولاء والتجربة المميزة والهوية العصرية قبل أي افتتاح منافس.
+                    </p>
+                </div>
+            </div>
+
+            <!-- In-Branch Experiential Showroom Feasibility Evaluation -->
+            <div class="web-card-purple rounded-3xl p-6 sm:p-8 space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
+                    <h3 class="text-lg font-black text-white flex items-center gap-2">
+                        <i class="fa-solid fa-vr-cardboard text-kaaf-purpleLight"></i>
+                        تقييم فكرة إنشاء مساحة عرض تفاعلية / صالة عرض مميزة داخل الفروع
+                    </h3>
+                    <span class="px-3 py-1 rounded-full bg-kaaf-purple/30 text-kaaf-purpleLight text-[11px] font-bold">تخضع لدراسة الجدوى التشغيلية</span>
+                </div>
+                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                    بدلاً من الدخول في حرب أسعار، يمكن خلق ميزة تنافسية عبر تخصيص منطقة عرض جذابة داخل الفروع (Experiential Display Zone) للعروض الموسمية والمنتجات المختارة تمنح المتسوق تجربة تستحق الزيارة والتصوير، <strong class="text-white">بشرط استيفاء معايير التقييم الستة قبل التنفيذ:</strong>
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-xs">
+                    <div class="p-3 rounded-xl bg-black/50 border border-white/10">
+                        <strong class="text-kaaf-purpleLight block">1. مساحة الفروع</strong>
+                        <span class="text-gray-400 text-[11px]">توفر مساحة دون إعاقة حركة العربات.</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-black/50 border border-white/10">
+                        <strong class="text-kaaf-purpleLight block">2. تكلفة التنفيذ</strong>
+                        <span class="text-gray-400 text-[11px]">اعتماد وحدات عرض معيارية منخفضة التكلفة.</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-black/50 border border-white/10">
+                        <strong class="text-kaaf-purpleLight block">3. نوع المنتجات</strong>
+                        <span class="text-gray-400 text-[11px]">التركيز على المواسم، المخبوزات، والباقات.</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-black/50 border border-white/10">
+                        <strong class="text-kaaf-purpleLight block">4. تجربة العميل</strong>
+                        <span class="text-gray-400 text-[11px]">سهولة التذوق، وضوح الأسعار، وجاذبية التصوير.</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-black/50 border border-white/10">
+                        <strong class="text-kaaf-purpleLight block">5. العائد المتوقع</strong>
+                        <span class="text-gray-400 text-[11px]">قياس مبيعات الأصناف المعروضة أسبوعياً.</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-black/50 border border-white/10">
+                        <strong class="text-kaaf-purpleLight block">6. الميزة التنافسية</strong>
+                        <span class="text-gray-400 text-[11px]">صناعة محتوى حي من داخل المتجر يومياً.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 07 & 08 — POSITIONING & 7 PROMOTIONAL OFFER MECHANISMS            -->
+        <!-- ========================================================================= -->
+        <section id="offers" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-kaaf-border/60 pb-3">
+                <div class="flex items-center gap-3">
+                    <span class="px-3 py-1 rounded-full bg-kaaf-green/30 text-kaaf-greenLight font-black text-xs border border-kaaf-green/50">07 &amp; 08</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">التمركز التسويقي واستراتيجية العروض والترويج (7 آليات متكاملة)</h2>
+                </div>
+                <span class="text-xs text-kaaf-greenLight font-bold hidden sm:inline">Traffic &amp; Basket Growth</span>
+            </div>
+
+            <!-- Positioning Statement -->
+            <div class="web-card-green p-6 sm:p-8 rounded-3xl space-y-2 border-r-4 border-kaaf-greenLight">
+                <span class="text-xs font-bold text-kaaf-greenLight uppercase tracking-wider">التمركز التسويقي المقترح (Brand Positioning)</span>
+                <p class="text-base sm:text-xl font-black text-white leading-relaxed">
+                    «بن عفيف: الوجهة الذكية والأقرب للأسرة في المنطقة الشرقية — حيث تجتمع جودة الاختيار، وتكامل المقاضي، وعروض التوفير المدروسة في تجربة تسوق سهلة وسريعة.»
+                </p>
+            </div>
+
+            <!-- 7 Offer Types Table -->
+            <div class="web-card-blue p-6 sm:p-8 rounded-3xl space-y-5">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <h3 class="text-lg font-black text-white">مصفوفة نظام العروض السبعة (تُعتمد أسعارها بعد مراجعة التكلفة والهامش والمخزون)</h3>
+                    <span class="px-3 py-1 rounded-full bg-amber-950/80 border border-kaaf-gold/50 text-kaaf-gold text-[11px] font-bold">
+                        * لا تُعتمد نسب خصم نهائية إلا بعد مراجعة هوامش الربح والمخزون مع الإدارة
+                    </span>
+                </div>
+
+                <div class="overflow-x-auto rounded-2xl border border-white/10">
+                    <table class="w-full text-right text-xs">
+                        <thead class="bg-black/70 text-gray-200 font-black border-b border-white/10">
+                            <tr>
+                                <th class="p-3.5 min-w-[140px]">نوع العرض</th>
+                                <th class="p-3.5 min-w-[140px]">الهدف التجاري والجمهور</th>
+                                <th class="p-3.5 min-w-[150px]">المنتجات والفكرة الإبداعية</th>
+                                <th class="p-3.5 min-w-[160px]">الرسالة الإعلانية</th>
+                                <th class="p-3.5 min-w-[160px]">التنفيذ بالفرع والمنصات</th>
+                                <th class="p-3.5 min-w-[120px]">مؤشرات النجاح</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/10 text-gray-300">
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3.5 font-black text-kaaf-cyanLight">1. عروض المنتجات الأساسية</td>
+                                <td class="p-3.5">جذب الزيارات (Traffic Driver) للعائلات والباحثين عن التوفير.</td>
+                                <td class="p-3.5">الأرز، الزيوت، السكر، الدواجن، الحليب؛ عرض «أساسيات البيت بسعر يفرق».</td>
+                                <td class="p-3.5 text-white">«أساسيات سفرتك اليومية بأفضل قيمة في الشرقية».</td>
+                                <td class="p-3.5">منصات عرض عند مدخل الفرع + ريلز سريع يوضح السعر والوفرة.</td>
+                                <td class="p-3.5">عدد الزيارات والفواتير التي تضم الصنف.</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3.5 font-black text-kaaf-greenLight">2. عروض السلة المتكاملة</td>
+                                <td class="p-3.5">رفع متوسط قيمة السلة (AOV) للأسر.</td>
+                                <td class="p-3.5">تجميع أصناف مكملة (مثلاً: باقة الفطور أو باقة الطبخ أو باقة النظافة).</td>
+                                <td class="p-3.5 text-white">«سلة واحدة تكفيك.. جمعنا لك الأهم ووفرنا عليك».</td>
+                                <td class="p-3.5">تغليف الباقة أو وضعها في ركن موحد + منشور Carousel تفصيلي.</td>
+                                <td class="p-3.5">متوسط قيمة الفاتورة وعدد الباقات المباعة.</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3.5 font-black text-kaaf-gold">3. عروض الكميات</td>
+                                <td class="p-3.5">تحفيز الشراء بالجملة لأصحاب المشتريات الكبيرة.</td>
+                                <td class="p-3.5">اشترِ 2 واحصل على ميزة إضافية أو سعر الكرتون (وفق الهامش والمخزون).</td>
+                                <td class="p-3.5 text-white">«كل ما زادت الكمية.. زاد توفيرك مع بن عفيف».</td>
+                                <td class="p-3.5">لافتات واضحة على الرف + إعلانات تستهدف الأسر الكبيرة.</td>
+                                <td class="p-3.5">حجم الوحدات المباعة لكل فاتورة (UPT).</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3.5 font-black text-kaaf-roseLight">4. عروض نهاية الأسبوع</td>
+                                <td class="p-3.5">خلق ذروة زيارات أيام الخميس والجمعة والسبت.</td>
+                                <td class="p-3.5">«ويكند التوفير في بن عفيف» على مختارات الطازج واللحوم والمقاضي.</td>
+                                <td class="p-3.5 text-white">«عروض الويكند وصلت.. لا تفوّت الفرصة قبل نفاد الكمية».</td>
+                                <td class="p-3.5">إطلاق الحملة مساء الأربعاء عبر واتساب، سناب، وإنستغرام.</td>
+                                <td class="p-3.5">نمو مبيعات الويكند مقارنة ببقية الأسبوع.</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3.5 font-black text-kaaf-purpleLight">5. عروض الفئات</td>
+                                <td class="p-3.5">تنشيط أقسام محددة وزيادة اكتشاف الأصناف.</td>
+                                <td class="p-3.5">أسبوع الألبان والمخبوزات، أسبوع المنظفات، أو أسبوع المشروبات.</td>
+                                <td class="p-3.5 text-white">«هالأسبوع دلعنا قسم المخبوزات والألبان بعروض ما تتفوت».</td>
+                                <td class="p-3.5">تزيين القسم داخل الفرع + جولة تيك توك داخل القسم.</td>
+                                <td class="p-3.5">نمو مبيعات الفئة المستهدفة خلال الأسبوع.</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3.5 font-black text-kaaf-cyanLight">6. عروض الولاء وتكرار الشراء</td>
+                                <td class="p-3.5">تحويل الزائر الجديد إلى عميل دائم.</td>
+                                <td class="p-3.5">قسيمة خصم للزيارة القادمة عند الشراء بقيمة محددة أو عبر كود المتابعين.</td>
+                                <td class="p-3.5 text-white">«زيارتك الأولى بداية.. وهديتك تنتظرك في زيارتك الجاية».</td>
+                                <td class="p-3.5">كوبون مطبوع مع الفاتورة أو كود حصري لمتابعي الحسابات.</td>
+                                <td class="p-3.5">نسبة استرداد القسائم ومعدل تكرار الزيارة.</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3.5 font-black text-kaaf-greenLight">7. عروض المناسبات والمواسم</td>
+                                <td class="p-3.5">استثمار الذروة الموسمية (الشتاء، نهاية العام، رمضان).</td>
+                                <td class="p-3.5">ركن المشروبات الساخنة والكشتات الشتوية، ومقاضي رمضان المبكرة.</td>
+                                <td class="p-3.5 text-white">«جهزنا لك كل اللي يحلي شتاء الشرقية وجمعات الأهل».</td>
+                                <td class="p-3.5">أجنحة موسمية بارزة + حملات فيديو وإعلانات محلية.</td>
+                                <td class="p-3.5">إجمالي مبيعات الحملة الموسمية.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 09 & 10 — DIGITAL IDENTITY REVAMP & 10 CONTENT PILLARS            -->
+        <!-- ========================================================================= -->
+        <section id="content" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-kaaf-border/60 pb-3">
+                <div class="flex items-center gap-3">
+                    <span class="px-3 py-1 rounded-full bg-kaaf-purple/30 text-kaaf-purpleLight font-black text-xs border border-kaaf-purple/50">09 &amp; 10</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">تطوير الهوية الرقمية واستراتيجية المحتوى (10 محاور + نماذج سعودية)</h2>
+                </div>
+                <span class="text-xs text-kaaf-purpleLight font-bold hidden sm:inline">Digital Brand &amp; Content</span>
+            </div>
+
+            <!-- Unified Digital Identity Checklist -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="web-card-rose p-6 rounded-3xl space-y-3">
+                    <h3 class="text-lg font-black text-white flex items-center gap-2">
+                        <i class="fa-brands fa-instagram text-kaaf-roseLight"></i>
+                        خطة تطوير Instagram الفورية
+                    </h3>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li>• <strong>البروفايل والـ Bio:</strong> شعار واضح عالي الدقة + Bio باللهجة السعودية البيضاء يوضح النشاط والفروع وأوقات العمل + رابط موحد للواتساب وخرائط الفروع.</li>
+                        <li>• <strong>الـ Highlights الستة:</strong> [العروض • المنتجات • الفروع • أوقات العمل • جديدنا • تواصل معنا] بأغلفة موحدة ومحتوى محدث أسبوعياً.</li>
+                        <li>• <strong>نظام الـ Grid والـ Thumbnails:</strong> قوالب ثابتة للعروض والمنتجات وأغلفة ريلز موحدة تمنح الحساب مظهراً احترافياً فور زيارته.</li>
+                    </ul>
+                </div>
+
+                <div class="web-card-purple p-6 rounded-3xl space-y-3">
+                    <h3 class="text-lg font-black text-white flex items-center gap-2">
+                        <i class="fa-brands fa-tiktok text-kaaf-purpleLight"></i>
+                        خطة تطوير TikTok والهوية الموحدة
+                    </h3>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li>• <strong>Business Account وتوحيد الاسم:</strong> تقييم تحويل الحساب إلى Business وفق متطلبات المنصة وتوحيد الـ Handle مع Instagram.</li>
+                        <li>• <strong>محتوى مخصص لـ TikTok:</strong> تصوير حي داخل الأرفف (POV متسوق، تحدي سلة بـ X ريال، وصل حديثاً) بإيقاع سريع بعيداً عن التصاميم الجامدة.</li>
+                        <li>• <strong>الهوية الموحدة:</strong> توحيد الألوان، الخطوط، نبرة الصوت السعودية القريبة، ورسائل العروض عبر كافة المنصات.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 10 Content Pillars with Saudi White-Dialect Copy Examples -->
+            <div class="web-card-cyan p-6 sm:p-8 rounded-3xl space-y-5">
+                <h3 class="text-lg font-black text-white">محاور المحتوى العشرة (Content Pillars) مع نماذج نصوص باللهجة السعودية البيضاء</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    <div class="p-4 rounded-2xl bg-black/55 border border-white/10 space-y-1.5">
+                        <span class="text-kaaf-cyanLight font-black">1. عروض بن عفيف (Post / Story)</span>
+                        <p class="text-gray-200">«عروض نهاية الأسبوع وصلت في بن عفيف! جمعنا لك أهم أساسيات البيت بأسعار تفرق معك في الفاتورة. مرّ أقرب فرع لك اليوم قبل ما تخلص الكمية.»</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/55 border border-white/10 space-y-1.5">
+                        <span class="text-kaaf-greenLight font-black">2. منتجات تستحق التجربة (Reel / TikTok)</span>
+                        <p class="text-gray-200">«لو تدور على قهوة تضبط مزاجك هالشتاء، تعال شوف التشكيلة الجديدة اللي وصلت أرفف بن عفيف.. جودة عالية وطعم يبيض الوجه قدام ضيوفك.»</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/55 border border-white/10 space-y-1.5">
+                        <span class="text-kaaf-gold font-black">3. سلة التوفير الأسبوعية (Carousel / TikTok)</span>
+                        <p class="text-gray-200">«وش تقدر تشتري لبيتك في سلة واحدة من بن عفيف؟ رتبنا لك سلة متكاملة فيها الأرز والزيت والألبان والمنظفات بتوفير ذكي يناسب ميزانية الأسرة.»</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/55 border border-white/10 space-y-1.5">
+                        <span class="text-kaaf-purpleLight font-black">4. احتياجات الأسرة والمنزل (Post)</span>
+                        <p class="text-gray-200">«من مقاضي المطبخ إلى مستلزمات العناية والنظافة، كل اللي تحتاجه أسرتك مرتب وواضح عشان تخلص تسوقك بسرعة وراحة.»</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/55 border border-white/10 space-y-1.5">
+                        <span class="text-kaaf-roseLight font-black">5. وصفات وأفكار استخدام المنتجات (Reel)</span>
+                        <p class="text-gray-200">«فكرة عشاء سريعة ولذيذة بمكونات كلها متوفرة في قسم الطازج والألبان عند بن عفيف.. احفظ المقطع وجربها اليوم!»</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/55 border border-white/10 space-y-1.5">
+                        <span class="text-kaaf-cyanLight font-black">6. جولة داخل الفروع (TikTok POV)</span>
+                        <p class="text-gray-200">«خذوا معنا جولة سريعة داخل فرعنا في الشرقية وشوفوا ترتيب الأقسام وتنوع الأصناف والعروض الموجودة اليوم على الأرفف.»</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/55 border border-white/10 space-y-1.5">
+                        <span class="text-kaaf-greenLight font-black">7. وصول المنتجات الجديدة (Story / Reel)</span>
+                        <p class="text-gray-200">«توّه واصل! دفعة جديدة من المنتجات المستوردة والمحلية صارت متوفرة الحين في فروع بن عفيف.. لحقوا عليها.»</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/55 border border-white/10 space-y-1.5">
+                        <span class="text-kaaf-gold font-black">8. محتوى تفاعلي مع الجمهور (Story Poll / Post)</span>
+                        <p class="text-gray-200">«وش أكثر قسم تروح له أول ما تدخل السوبرماركت؟ 1- المخبوزات والطازج 2- العروض والخصومات 3- القهوة والحلويات؟ شاركونا بالتعليقات!»</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/55 border border-white/10 space-y-1.5">
+                        <span class="text-kaaf-purpleLight font-black">9. إبراز جودة المنتجات وتجربة التسوق (Reel)</span>
+                        <p class="text-gray-200">«في بن عفيف نهتم بأدق التفاصيل: من نظافة الأرفف وحفظ المنتجات الطازجة إلى سرعة الخدمة عند الكاشير.»</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/55 border border-white/10 space-y-1.5">
+                        <span class="text-kaaf-roseLight font-black">10. محتوى موسمي مرتبط بالطقس والمناسبات (Reel / TikTok)</span>
+                        <p class="text-gray-200">«برد الشرقية يبي له جلسة دافية! جهزنا لك ركن متكامل للشاي والقهوة والمكسرات ومستلزمات الكشتة في مكان واحد.»</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 11 & 12 — PAID ADS, CUSTOMER JOURNEY & 2-MONTH SEASONAL PLAN      -->
+        <!-- ========================================================================= -->
+        <section id="seasonal" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-kaaf-border/60 pb-3">
+                <div class="flex items-center gap-3">
+                    <span class="px-3 py-1 rounded-full bg-kaaf-blue/30 text-kaaf-cyanLight font-black text-xs border border-kaaf-blue/50">11 &amp; 12</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">الحملات الإعلانية، رحلة العميل، والخطة الموسمية (ابتداءً من 24 نوفمبر 2026)</h2>
+                </div>
+                <span class="text-xs text-kaaf-cyanLight font-bold hidden sm:inline">Paid Media &amp; Seasonal Calendar</span>
+            </div>
+
+            <!-- Paid Ads Channels & Funnel -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <div class="lg:col-span-7 web-card-blue p-6 sm:p-8 rounded-3xl space-y-4">
+                    <h3 class="text-lg font-black text-white">هيكل الحملات الإعلانية المدفوعة (Paid Advertising Funnel)</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                        <div class="p-3.5 rounded-2xl bg-black/55 border border-kaaf-cyan/30">
+                            <strong class="text-kaaf-cyanLight block mb-1">1. Awareness (الوعي بالعلامة)</strong>
+                            <span class="text-gray-300">حملات فيديو على TikTok وSnapchat وInstagram Reels لترسيخ اسم بن عفيف في أحياء الشرقية.</span>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-black/55 border border-kaaf-green/30">
+                            <strong class="text-kaaf-greenLight block mb-1">2. Offer Campaigns (حملات العروض)</strong>
+                            <span class="text-gray-300">إعلانات Meta وInstagram وSnapchat لعروض نهاية الأسبوع والسلال المتكاملة بأزرار تواصل مباشر.</span>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-black/55 border border-kaaf-gold/30">
+                            <strong class="text-kaaf-gold block mb-1">3. Local Campaigns (الاستهداف المحلي)</strong>
+                            <span class="text-gray-300">استهداف جغرافي دقيق (Radius Targeting) حول الفروع + Google Search وGoogle Maps/GBP.</span>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-black/55 border border-kaaf-purple/30">
+                            <strong class="text-kaaf-purpleLight block mb-1">4. Retargeting (إعادة الاستهداف)</strong>
+                            <span class="text-gray-300">إعادة استهداف المتفاعلين مع الفيديوهات والعروض (وفق توفر أدوات التتبع والموافقات المطلوبة).</span>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-gray-300 bg-black/50 p-3 rounded-xl border border-amber-500/30">
+                        <strong class="text-kaaf-gold">آلية قياس زيارات الفروع بدقة:</strong> نظراً لأن منصات التواصل لا تقيس المبيعات داخل الفروع تلقائياً، نربط الحملات بـ <strong class="text-white">أكواد عروض حصرية عند الكاشير، روابط واتساب مخصصة، تتبع نقرات الاتجاهات على Google Maps، ومقارنة بيانات نقاط البيع (POS)</strong> أيام الحملة.
+                    </p>
+                </div>
+
+                <!-- 7-Step Customer Journey -->
+                <div class="lg:col-span-5 web-card-green p-6 sm:p-8 rounded-3xl space-y-3">
+                    <h3 class="text-lg font-black text-white">رحلة العميل (من الإعلان إلى تكرار الزيارة)</h3>
+                    <ol class="space-y-2 text-xs text-gray-200">
+                        <li class="p-2.5 rounded-xl bg-black/50 border border-white/10"><strong>1. الاكتشاف:</strong> يشاهد العميل فيديو عرض نهاية الأسبوع أو جولة الفرع على سناب/تيك توك/إنستغرام.</li>
+                        <li class="p-2.5 rounded-xl bg-black/50 border border-white/10"><strong>2. التحقق:</strong> يدخل البروفايل أو الهايلايت أو يراسل واتساب للتأكد من تفاصيل العرض وتوفر الصنف.</li>
+                        <li class="p-2.5 rounded-xl bg-black/50 border border-white/10"><strong>3. الوصول للفرع:</strong> يضغط على رابط Google Maps الموحد في البايو أو الإعلان للوصول لأقرب فرع.</li>
+                        <li class="p-2.5 rounded-xl bg-black/50 border border-white/10"><strong>4. سهولة التسوق:</strong> يجد لافتات واضحة عند المدخل والأرفف ترشده لعروض السوشيال ميديا.</li>
+                        <li class="p-2.5 rounded-xl bg-black/50 border border-white/10"><strong>5. توسيع السلة:</strong> يشاهد باقات السلة المتكاملة والأصناف المكملة فيضيف منتجات إضافية.</li>
+                        <li class="p-2.5 rounded-xl bg-black/50 border border-white/10"><strong>6. الشراء والتفعيل:</strong> يستخدم كود العرض عند الكاشير أو يستلم قسيمة الزيارة القادمة.</li>
+                        <li class="p-2.5 rounded-xl bg-black/50 border border-white/10"><strong>7. العودة المستمرة:</strong> يصله تنبيه بعروض الأسبوع الجديد عبر واتساب أو إعادة الاستهداف.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- 2-Month Seasonal Calendar (Nov 24, 2026 - Late Jan 2027) -->
+            <div class="web-card-gold p-6 sm:p-8 rounded-3xl space-y-5">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <h3 class="text-lg font-black text-white flex items-center gap-2">
+                        <i class="fa-solid fa-calendar-days text-kaaf-gold"></i>
+                        الخطة الموسمية لمدة شهرين (تبدأ 24 نوفمبر 2026)
+                    </h3>
+                    <span class="text-[11px] text-kaaf-goldLight font-bold">
+                        * التواريخ الهجرية وبعض مواعيد المواسم تقديرية وتُراجع قبل الاعتماد النهائي
+                    </span>
+                </div>
+
+                <div class="overflow-x-auto rounded-2xl border border-white/10">
+                    <table class="w-full text-right text-xs">
+                        <thead class="bg-black/75 text-gray-200 font-black border-b border-white/10">
+                            <tr>
+                                <th class="p-3 min-w-[145px]">الموسم والتوقيت التقديري</th>
+                                <th class="p-3 min-w-[130px]">الهدف والفئة المستهدفة</th>
+                                <th class="p-3 min-w-[150px]">الأقسام وفكرة العرض</th>
+                                <th class="p-3 min-w-[170px]">الفكرة الإبداعية ومحتوى IG / TikTok</th>
+                                <th class="p-3 min-w-[140px]">الحملات ومؤشرات القياس</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/10 text-gray-300">
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3 font-black text-kaaf-gold">1. الجمعة البيضاء و Cyber Monday<br><span class="text-[10px] text-gray-400">24 نوفمبر – 1 ديسمبر 2026</span></td>
+                                <td class="p-3">تحفيز الزيارات الفورية ورفع المبيعات؛ الباحثون عن العروض والعائلات.</td>
+                                <td class="p-3">الأساسيات، الأجهزة المنزلية الصغيرة (إن وجدت)، والمنظفات؛ «أقوى عروض نوفمبر».</td>
+                                <td class="p-3">عدّ تنازلي يومي على IG Stories + فيديو TikTok «أقوى 5 صفقات في بن عفيف هالويكند».</td>
+                                <td class="p-3">Offer + Local Ads (Snap &amp; Meta)؛ قياس عدد الفواتير وقيمة السلة.</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3 font-black text-kaaf-cyanLight">2. موسم الشتاء والكشتات<br><span class="text-[10px] text-gray-400">ديسمبر 2026 (مستمر)</span></td>
+                                <td class="p-3">زيادة سلة الضيافة والرحلات؛ العائلات والشباب في الشرقية.</td>
+                                <td class="p-3">القهوة، الشاي، المكسرات، الشوكولاتة، الفحم ومستلزمات البر؛ «باقة الشتاء والكشتة».</td>
+                                <td class="p-3">هوية دافئة «شتاء الشرقية أحلى مع بن عفيف» + ريلز تجهيز شنطة الكشتة.</td>
+                                <td class="p-3">Awareness + Video Ads على TikTok وIG؛ قياس مبيعات قسم المشروبات والضيافة.</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3 font-black text-kaaf-greenLight">3. عروض نهاية العام وبداية 2027<br><span class="text-[10px] text-gray-400">25 ديسمبر 2026 – 5 يناير 2027</span></td>
+                                <td class="p-3">تصفية مخزون نهاية العام واستقبال مقاضي يناير؛ العائلات والمشتريات الكبيرة.</td>
+                                <td class="p-3">سلال التوفير العائلية والعبوات الاقتصادية؛ «ودّع 2026 بأقوى توفير وابدأ 2027 صح».</td>
+                                <td class="p-3">منشورات Carousel مقارنة التوفير + تيك توك «مقاضي شهر يناير في سلة واحدة».</td>
+                                <td class="p-3">Offer + Retargeting Ads؛ قياس متوسط قيمة السلة ومبيعات السلال.</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3 font-black text-kaaf-purpleLight">4. تصفيات يناير والتحضير المبكر لرمضان 1448هـ<br><span class="text-[10px] text-gray-400">6 – 24 يناير 2027 (رمضان متوقع في فبراير 2027)</span></td>
+                                <td class="p-3">تنشيط الشراء المبكر والاستعداد للموسم الرمضاني؛ الأسر وأصحاب المشتريات الكبيرة.</td>
+                                <td class="p-3">التمور، الزيوت، الدقيق، العصائر، والأواني؛ «جهّز لرمضان بدري وارتاح من الزحمة».</td>
+                                <td class="p-3">سلسلة «قائمة مقاضي رمضان الذكية» على IG وTikTok وإبراز توفر الكميات والتمور.</td>
+                                <td class="p-3">Search + Local + WhatsApp Campaigns؛ قياس الطلبات المبكرة وتكرار الزيارة.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 13 & 14 — 2-MONTH EXECUTION ROADMAP & KPI / REPORTING FRAMEWORK   -->
+        <!-- ========================================================================= -->
+        <section id="roadmap" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-kaaf-border/60 pb-3">
+                <div class="flex items-center gap-3">
+                    <span class="px-3 py-1 rounded-full bg-kaaf-green/30 text-kaaf-greenLight font-black text-xs border border-kaaf-green/50">13 &amp; 14</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide">الجدول التنفيذي (شهرين) ومؤشرات الأداء والتقارير</h2>
+                </div>
+                <span class="text-xs text-kaaf-greenLight font-bold hidden sm:inline">8-Week Execution &amp; KPIs</span>
+            </div>
+
+            <!-- 8-Week Execution Table (Highlighting Sprint Week 1 & Week 2) -->
+            <div class="web-card-green p-6 sm:p-8 rounded-3xl space-y-4">
+                <h3 class="text-lg font-black text-white">الجدول الزمني للتنفيذ (8 أسابيع — مع التركيز التأسيسي في الأسبوعين الأولين)</h3>
+                <div class="overflow-x-auto rounded-2xl border border-white/10">
+                    <table class="w-full text-right text-xs">
+                        <thead class="bg-black/75 text-gray-200 font-black border-b border-white/10">
+                            <tr>
+                                <th class="p-3.5 min-w-[130px]">المرحلة الزمنية</th>
+                                <th class="p-3.5 min-w-[260px]">الأنشطة التنفيذية الرئيسية</th>
+                                <th class="p-3.5 min-w-[180px]">المخرجات القابلة للتسليم</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/10 text-gray-300">
+                            <tr class="bg-kaaf-blue/15 hover:bg-kaaf-blue/25">
+                                <td class="p-3.5 font-black text-kaaf-cyanLight">الأسبوع 1 (تأسيسي)<br><span class="text-[10px] text-gray-400">24 – 30 نوفمبر 2026</span></td>
+                                <td class="p-3.5">إعادة ضبط الحضور الرقمي: فحص ملفات Drive وSheets، تطوير البروفايل والـ Bio، توحيد أسماء المستخدمين، تجهيز الـ Highlights الستة، بناء الهوية البصرية للـ Grid، تصميم قوالب العروض وأغلفة الريلز، وتحديد أسلوب التصوير وخطة المحتوى.</td>
+                                <td class="p-3.5 text-white">حسابات جاهزة بهوية موحدة + 6 Highlights + قوالب تصميم معتمدة + خطة محتوى أولية.</td>
+                            </tr>
+                            <tr class="bg-kaaf-green/15 hover:bg-kaaf-green/25">
+                                <td class="p-3.5 font-black text-kaaf-greenLight">الأسبوع 2 (الإطلاق)<br><span class="text-[10px] text-gray-400">1 – 7 ديسمبر 2026</span></td>
+                                <td class="p-3.5">بدء النشر بالهوية الجديدة، إطلاق أول مجموعة عروض، تفعيل الحملات الإعلانية الموجهة جغرافياً (A/B Testing للرسائل)، وقياس التفاعل والاستفسارات والزيارات.</td>
+                                <td class="p-3.5 text-white">إطلاق المحتوى والحملات الأولى + تقرير أداء الأسبوع الثاني وتحليل العروض الأكثر جذباً.</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3.5 font-black text-kaaf-gold">الأسابيع 3 – 4<br><span class="text-[10px] text-gray-400">8 – 21 ديسمبر 2026</span></td>
+                                <td class="p-3.5">تكثيف محتوى موسم الشتاء، إطلاق عروض السلة المتكاملة وعروض الفئات، توسيع إعادة الاستهداف، وتحسين الإعلانات أسبوعياً بناءً على بيانات الفروع.</td>
+                                <td class="p-3.5 text-white">تقرير أداء الشهر الأول + تحسين تكلفة الوصول وزيادة التفاعل المحلي.</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3.5 font-black text-kaaf-purpleLight">الأسابيع 5 – 6<br><span class="text-[10px] text-gray-400">22 ديسمبر 2026 – 4 يناير 2027</span></td>
+                                <td class="p-3.5">إطلاق حملة نهاية العام وبداية 2027، تفعيل عروض الكميات والولاء، وتكثيف الفيديوهات القصيرة من داخل الفروع لتعزيز الثقة.</td>
+                                <td class="p-3.5 text-white">حملة نهاية العام + قياس معدلات تكرار الزيارة واسترداد القسائم.</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-3.5 font-black text-kaaf-roseLight">الأسابيع 7 – 8<br><span class="text-[10px] text-gray-400">5 – 24 يناير 2027</span></td>
+                                <td class="p-3.5">تنفيذ تصفيات يناير وإطلاق حملة التحضير المبكر لرمضان 1448هـ، تقييم شامل لأداء الشهرين، وإعداد خارطة طريق التوسع لموسم رمضان.</td>
+                                <td class="p-3.5 text-white">التقرير الختامي للشهرين + خطة حملة رمضان 1448هـ المتكاملة.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 4 KPI Categories + Weekly Report Template -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="web-card-blue p-5 rounded-2xl space-y-2">
+                        <h4 class="text-sm font-black text-kaaf-cyanLight">1. Brand Awareness (الوعي)</h4>
+                        <ul class="text-xs text-gray-300 space-y-1">
+                            <li>• Reach &amp; Impressions في المنطقة الشرقية</li>
+                            <li>• Video Views ونسب إكمال المشاهدة</li>
+                            <li>• نمو المتابعين الفعليين وتذكر العلامة</li>
+                        </ul>
+                    </div>
+                    <div class="web-card-purple p-5 rounded-2xl space-y-2">
+                        <h4 class="text-sm font-black text-kaaf-purpleLight">2. Engagement (التفاعل)</h4>
+                        <ul class="text-xs text-gray-300 space-y-1">
+                            <li>• Engagement Rate &amp; Comments</li>
+                            <li>• Saves (حفظ منشورات العروض والوصفات)</li>
+                            <li>• Shares (مشاركة العروض بين أفراد الأسرة)</li>
+                        </ul>
+                    </div>
+                    <div class="web-card-cyan p-5 rounded-2xl space-y-2">
+                        <h4 class="text-sm font-black text-kaaf-cyanLight">3. Traffic &amp; Visits (الزيارات)</h4>
+                        <ul class="text-xs text-gray-300 space-y-1">
+                            <li>• النقرات على روابط واتساب والموقع</li>
+                            <li>• طلبات الاتجاهات (Directions) على Google Maps</li>
+                            <li>• الاستفسارات والزيارات المقاسة بأكواد العروض</li>
+                        </ul>
+                    </div>
+                    <div class="web-card-green p-5 rounded-2xl space-y-2">
+                        <h4 class="text-sm font-black text-kaaf-greenLight">4. Sales Performance (المبيعات)</h4>
+                        <ul class="text-xs text-gray-300 space-y-1">
+                            <li>• عدد الفواتير ومتوسط قيمة السلة (AOV)</li>
+                            <li>• عدد العملاء الجدد ومعدل تكرار الشراء</li>
+                            <li>• أداء الأصناف الترويجية وROAS (عند توفر بيانات POS)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Weekly Report Structure -->
+                <div class="lg:col-span-5 web-card-amber p-6 rounded-3xl space-y-3">
+                    <h3 class="text-base font-black text-kaaf-gold flex items-center gap-2">
+                        <i class="fa-solid fa-file-lines"></i>
+                        نموذج التقرير الأسبوعي المعتمد للإدارة
+                    </h3>
+                    <ol class="space-y-2 text-xs text-gray-200">
+                        <li class="p-2 rounded-lg bg-black/50"><strong>1. ما الذي تم تنفيذه؟</strong> ملخص المنشورات، الفيديوهات، والحملات المفعّلة.</li>
+                        <li class="p-2 rounded-lg bg-black/50"><strong>2. ما الذي حقق نتائج؟</strong> أعلى العروض والأصناف جذباً للزيارات والاستفسارات.</li>
+                        <li class="p-2 rounded-lg bg-black/50"><strong>3. ما الذي لم يحقق المتوقع؟</strong> رصد الحملات أو الرسائل ذات الأداء الأقل بشفافية.</li>
+                        <li class="p-2 rounded-lg bg-black/50"><strong>4. ما أسباب ذلك؟</strong> تحليل توقيت العرض، وضوح الرسالة، أو توفر الصنف.</li>
+                        <li class="p-2 rounded-lg bg-black/50"><strong>5. التعديلات للأسبوع التالي:</strong> إعادة توجيه الميزانية وتعديل العروض فوراً.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- SECTION 15 — RECOMMENDATIONS, NEXT STEPS & CLOSING CTA                    -->
+        <!-- ========================================================================= -->
+        <section id="next-steps" class="relative rounded-[32px] overflow-hidden p-8 sm:p-14 web-card-green space-y-8 shadow-web-card">
+            <div class="kaaf-colorful-ribbon absolute top-0 left-0 right-0"></div>
+
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <span class="px-3 py-1 rounded-full bg-kaaf-green/30 text-kaaf-greenLight font-black text-xs border border-kaaf-green/50">15</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white">التوصيات والخطوات القادمة للبدء الفوري</h2>
+                </div>
+                <p class="text-xs sm:text-sm text-gray-300 max-w-3xl leading-relaxed">
+                    لضمان انطلاق الأسبوع التأسيسي في موعده المحدد (<strong class="text-white">24 نوفمبر 2026</strong>) بأعلى كفاءة، نوصي بتنفيذ خطوات التفعيل الأربع التالية خلال 48 ساعة:
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                    <div class="p-4 rounded-2xl bg-black/60 border border-kaaf-green/40 space-y-1.5">
+                        <span class="text-kaaf-greenLight font-black">الخطوة 1 • الصلاحيات والملفات</span>
+                        <p class="text-gray-300">مشاركة صلاحيات الوصول إلى Instagram وTikTok وGoogle Drive وGoogle Sheets وبيانات الفروع.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/60 border border-kaaf-cyan/40 space-y-1.5">
+                        <span class="text-kaaf-cyanLight font-black">الخطوة 2 • جلسة مراجعة العروض</span>
+                        <p class="text-gray-300">اعتماد قائمة الأصناف الترويجية للأسبوعين الأولين بعد مراجعة المخزون وهوامش الربح.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/60 border border-kaaf-gold/40 space-y-1.5">
+                        <span class="text-kaaf-gold font-black">الخطوة 3 • جدولة تصوير الفروع</span>
+                        <p class="text-gray-300">تحديد موعد زيارة فريق الإنتاج الميداني لتصوير الأرفف والعروض داخل فروع المنطقة الشرقية.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/60 border border-kaaf-purple/40 space-y-1.5">
+                        <span class="text-kaaf-purpleLight font-black">الخطوة 4 • آلية ربط المبيعات</span>
+                        <p class="text-gray-300">اعتماد أكواد العروض الرقمية وآلية مشاركة مؤشرات الفواتير الأسبوعية لقياس العائد بدقة.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-white/10 text-center max-w-2xl mx-auto space-y-4">
+                <h3 class="text-xl sm:text-2xl font-black text-white">
+                    جاهزون لنجعل «بن عفيف» الخيار الأول للمتسوق في المنطقة الشرقية
+                </h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://wa.me/966579534107?text=السلام%20عليكم،%20نرغب%20في%20اعتماد%20خطة%20النمو%20التسويقية%20والاستراتيجية%20التنافسية%20لعلامة%20بن%20عفيف" target="_blank" rel="noopener" class="no-print px-8 py-3.5 rounded-2xl bg-gradient-to-r from-kaaf-green via-kaaf-greenLight to-kaaf-cyan text-white font-black text-xs hover:shadow-lg hover:shadow-kaaf-green/30 transition-all flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>تأكيد بدء التنفيذ عبر الواتساب (+966 57 953 4107)</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-kaaf-border/60 bg-kaaf-dark/95 py-10 text-xs text-gray-400 mt-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-xl overflow-hidden bg-black border border-kaaf-greenLight/50 flex items-center justify-center p-0.5">
+                    <img src="https://i.ibb.co/qKTyhpv/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF GROUP Logo" class="w-full h-full object-cover rounded-lg">
+                </div>
+                <div>
+                    <span class="block font-bold text-white">KAAF GROUP</span>
+                    <span class="block text-[10px] text-gray-400">Retail Marketing Strategy &amp; Competitive Growth</span>
+                </div>
+            </div>
+
+            <div class="text-center md:text-right">
+                <span class="block font-bold text-gray-200">الخطة التسويقية والاستراتيجية التنافسية (شهرين)</span>
+                <span class="block text-gray-400">بن عفيف – المنطقة الشرقية، المملكة العربية السعودية</span>
+            </div>
+
+            <div class="text-gray-400 font-mono text-[10px]">
+                &copy; KAAF GROUP. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE HTML5 CANVAS SCRIPT -->
+    <script>
+        (function() {
+            const canvas = document.getElementById('interactive-bg-canvas');
+            const ctx = canvas.getContext('2d');
+
+            let width, height;
+            let particles = [];
+            const particleCount = 45;
+            const colors = ['#0A4C86', '#06B6D4', '#00875A', '#7C3AED', '#D4AF37'];
+
+            let mouse = {
+                x: null,
+                y: null,
+                radius: 140
+            };
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+
+            window.addEventListener('resize', resize);
+            window.addEventListener('mousemove', function(e) {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY;
+            });
+            window.addEventListener('mouseout', function() {
+                mouse.x = null;
+                mouse.y = null;
+            });
+
+            // Touch events for mobile
+            window.addEventListener('touchmove', function(e) {
+                if (e.touches.length > 0) {
+                    mouse.x = e.touches[0].clientX;
+                    mouse.y = e.touches[0].clientY;
+                }
+            }, { passive: true });
+            window.addEventListener('touchend', function() {
+                mouse.x = null;
+                mouse.y = null;
+            });
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.vx = (Math.random() - 0.5) * 0.8;
+                    this.vy = (Math.random() - 0.5) * 0.8;
+                    this.radius = Math.random() * 2.5 + 1.5;
+                    this.color = colors[Math.floor(Math.random() * colors.length)];
+                    this.baseAlpha = Math.random() * 0.4 + 0.3;
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+
+                    if (this.x < 0 || this.x > width) this.vx *= -1;
+                    if (this.y < 0 || this.y > height) this.vy *= -1;
+
+                    if (mouse.x !== null && mouse.y !== null) {
+                        let dx = mouse.x - this.x;
+                        let dy = mouse.y - this.y;
+                        let distance = Math.sqrt(dx * dx + dy * dy);
+                        if (distance < mouse.radius && distance > 0) {
+                            let force = (mouse.radius - distance) / mouse.radius;
+                            let directionX = (dx / distance) * force * 3;
+                            let directionY = (dy / distance) * force * 3;
+                            this.x -= directionX;
+                            this.y -= directionY;
+                        }
+                    }
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.globalAlpha = this.baseAlpha;
+                    ctx.fill();
+                }
+            }
+
+            function init() {
+                resize();
+                particles = [];
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle());
+                }
+            }
+
+            function connect() {
+                const maxDistance = 140;
+                for (let a = 0; a < particles.length; a++) {
+                    for (let b = a + 1; b < particles.length; b++) {
+                        let dx = particles[a].x - particles[b].x;
+                        let dy = particles[a].y - particles[b].y;
+                        let distance = Math.sqrt(dx * dx + dy * dy);
+
+                        if (distance < maxDistance) {
+                            let opacity = (1 - (distance / maxDistance)) * 0.25;
+                            ctx.beginPath();
+                            ctx.moveTo(particles[a].x, particles[a].y);
+                            ctx.lineTo(particles[b].x, particles[b].y);
+                            ctx.strokeStyle = '#00B377';
+                            ctx.globalAlpha = opacity;
+                            ctx.lineWidth = 1;
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                ctx.globalAlpha = 1;
+
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                    particles[i].draw();
+                }
+                connect();
+
+                requestAnimationFrame(animate);
+            }
+
+            window.onload = function() {
+                init();
+                animate();
+            };
+        })();
+    </script>
+</body>
+</html>
